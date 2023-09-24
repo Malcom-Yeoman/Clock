@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #333;
+}
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    border-radius: 50%;
+    background-color: #444;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    transform: rotate(90deg);
+    transition: transform 0.05s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+.hour-hand {
+    width: 4px;
+    height: 50px;
+    background: red;
+    z-index: 2;
+}
+.min-hand {
+    width: 2px;
+    height: 70px;
+    background: green;
+    z-index: 1;
+}
+.second-hand {
+    width: 1px;
+    height: 90px;
+    background: blue;
+    z-index: 0;
+}
+.number {
+    position: absolute;
+    font-size: 1.5rem;
+    color: white;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+.number[data-number="12"] { top: 5%; left: 50%; }
+.number[data-number="1"] { top: 15%; left: 80%; }
+.number[data-number="2"] { top: 30%; left: 90%; }
+.number[data-number="3"] { top: 50%; left: 90%; }
+.number[data-number="4"] { top: 70%; left: 85%; }
+.number[data-number="5"] { top: 85%; left: 70%; }
+.number[data-number="6"] { top: 90%; left: 50%; }
+.number[data-number="7"] { top: 85%; left: 30%; }
+.number[data-number="8"] { top: 70%; left: 15%; }
+.number[data-number="9"] { top: 50%; left: 10%; }
+.number[data-number="10"] { top: 30%; left: 10%; }
+.number[data-number="11"] { top: 15%; left: 25%; }
